@@ -9,7 +9,7 @@ const ImageSchema = new Schema({
 
 const MovieSchema = new Schema({
     title: String,
-    image: ImageSchema
+    image: ImageSchema // Include image schema
 });
 
 const ArticleSchema = new Schema({

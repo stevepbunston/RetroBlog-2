@@ -22,10 +22,6 @@
             <div class="mb-3">
                 <input type="file" name="image" id="" multiple>
             </div>
-<!--             <div class="mb-3">
-                <label class="form-label" for="image">Image</label>
-                <input class="form-control" type="text" name="article[image]" id="image" required>
-            </div> -->
             <div class="mb-3">
                 <label class="form-label" for="blog">Blog</label>
                 <textarea class="form-control" type="text" name="article[blog]" id="mytextarea"></textarea>
@@ -37,10 +33,10 @@
                 <label class="form-label" for="movieTitle<%= i %>">#<%= i %> Movie Title</label>
                 <input class="form-control" type="text" name="article[movies][<%= i - 1 %>][title]" id="movieTitle<%= i %>" required>
                 <label class="form-label" for="movieImage<%= i %>">#<%= i %> Movie Image</label>
-                <input class="form-control" type="file" name="article[movies][<%= i - 1 %>][image]" id="movieImage<%= i %>" accept="image/*" required>
+                <input class="form-control" type="file" name="movies" id="movieImage<%= i %>" accept="image/*" required>
             </div>
             <% } %>
-                        <div class="mb-3">
+            <div class="mb-3">
                 <button class="btn btn-success">Add Article</button>
             </div>
         </form>
