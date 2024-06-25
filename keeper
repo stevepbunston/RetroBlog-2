@@ -1,0 +1,632 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <h1 class="text-center">New Article</h1>
+    <div class="col-6 offset-3">
+        <form action="/articles" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" name="article[title]" id="title" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="game">Game</label>
+                <input class="form-control" type="text" name="article[game]" id="game" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="console">Console</label>
+                <input class="form-control" type="text" name="article[console]" id="console" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="release">Release</label>
+                <input class="form-control" type="text" name="article[release]" id="release" required>
+            </div>
+            <div class="mb-3">
+                <input type="file" name="image" id="" multiple>
+            </div>
+<!--             <div class="mb-3">
+                <label class="form-label" for="image">Image</label>
+                <input class="form-control" type="text" name="article[image]" id="image" required>
+            </div> -->
+            <div class="mb-3">
+                <label class="form-label" for="blog">Blog</label>
+                <textarea class="form-control" type="text" name="article[blog]" id="mytextarea"></textarea>
+            </div>
+            <h2>Movies</h2>
+            <div class="mb-3">
+                <label class="form-label" for="movieOne">#1 Movie</label>
+                <input class="form-control" type="text" name="article[movieOne]" id="movieOne" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="movieOneImage">#1 Movie Image</label>
+                <input class="form-control" type="text" name="article[movieOneImage]" id="movieOneImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="movieTwo">#2 Movie</label>
+                <input class="form-control" type="text" name="article[movieTwo]" id="movieTwo" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="movieTwoImage">#2 Movie Image</label>
+                <input class="form-control" type="text" name="article[movieTwoImage]" id="movieTwoImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="movieThree">#3 Movie</label>
+                <input class="form-control" type="text" name="article[movieThree]" id="movieThree" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="movieThreeImage">#3 Movie Image</label>
+                <input class="form-control" type="text" name="article[movieThreeImage]" id="movieThreeImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="movieFour">#4 Movie</label>
+                <input class="form-control" type="text" name="article[movieFour]" id="movieFour" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="movieFourImage">#4 Movie Image</label>
+                <input class="form-control" type="text" name="article[movieFourImage]" id="movieFourImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="movieFive">#5 Movie</label>
+                <input class="form-control" type="text" name="article[movieFive]" id="movieFive" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="movieFiveImage">#5 Movie Image</label>
+                <input class="form-control" type="text" name="article[movieFiveImage]" id="movieFiveImage" required>
+            </div>
+            <h2>Music</h2>
+            <div class="mb-3">
+                <label class="form-label" for="musicOne">#1 Music</label>
+                <input class="form-control" type="text" name="article[musicOne]" id="musicOne" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="musicOneImage">#1 Music Image</label>
+                <input class="form-control" type="text" name="article[musicOneImage]" id="musicOneImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="musicTwo">#2 Music</label>
+                <input class="form-control" type="text" name="article[musicTwo]" id="musicTwo" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="musicTwoImage">#2 Music Image</label>
+                <input class="form-control" type="text" name="article[musicTwoImage]" id="musicTwoImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="musicThree">#3 Music</label>
+                <input class="form-control" type="text" name="article[musicThree]" id="musicThree" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="musicThreeImage">#3 Music Image</label>
+                <input class="form-control" type="text" name="article[musicThreeImage]" id="musicThreeImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="musicFour">#4 Music</label>
+                <input class="form-control" type="text" name="article[musicFour]" id="musicFour" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="musicFourImage">#4 Music Image</label>
+                <input class="form-control" type="text" name="article[musicFourImage]" id="musicFourImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="musicFive">#5 Music</label>
+                <input class="form-control" type="text" name="article[musicFive]" id="musicFive" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="musicFiveImage">#5 Music Image</label>
+                <input class="form-control" type="text" name="article[musicFiveImage]" id="musicFiveImage" required>
+            </div>
+            <h2>NBA</h2>
+            <div class="mb-3">
+                <label class="form-label" for="nbaOne">#1 Team</label>
+                <input class="form-control" type="text" name="article[nbaOne]" id="nbaOne" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nbaOneImage">#1 Team Image</label>
+                <input class="form-control" type="text" name="article[nbaOneImage]" id="nbaOneImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nbaTwo">#2 Team</label>
+                <input class="form-control" type="text" name="article[nbaTwo]" id="nbaTwo" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nbaTwoImage">#2 Team Image</label>
+                <input class="form-control" type="text" name="article[nbaTwoImage]" id="nbaTwoImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nbaThree">#3 Team</label>
+                <input class="form-control" type="text" name="article[nbaThree]" id="nbaThree" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nbaThreeImage">#3 Team Image</label>
+                <input class="form-control" type="text" name="article[nbaThreeImage]" id="nbaThreeImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nbaFour">#4 Team</label>
+                <input class="form-control" type="text" name="article[nbaFour]" id="nbaFour" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nbaFourImage">#4 Team Image</label>
+                <input class="form-control" type="text" name="article[nbaFourImage]" id="nbaFourImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nbaFive">#5 Team</label>
+                <input class="form-control" type="text" name="article[nbaFive]" id="nbaFive" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nbaFiveImage">#5 Team Image</label>
+                <input class="form-control" type="text" name="article[nbaFiveImage]" id="nbaFiveImage" required>
+            </div>
+            <h2>NHL</h2>
+            <div class="mb-3">
+                <label class="form-label" for="nhlOne">#1 Team</label>
+                <input class="form-control" type="text" name="article[nhlOne]" id="nhlOne" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nhlOneImage">#1 Team Image</label>
+                <input class="form-control" type="text" name="article[nhlOneImage]" id="nhlOneImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nhlTwo">#2 Team</label>
+                <input class="form-control" type="text" name="article[nhlTwo]" id="nhlTwo" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nhlTwoImage">#2 Team Image</label>
+                <input class="form-control" type="text" name="article[nhlTwoImage]" id="nhlTwoImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nhlThree">#3 Team</label>
+                <input class="form-control" type="text" name="article[nhlThree]" id="nhlThree" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nhlThreeImage">#3 Team Image</label>
+                <input class="form-control" type="text" name="article[nhlThreeImage]" id="nhlThreeImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nhlFour">#4 Team</label>
+                <input class="form-control" type="text" name="article[nhlFour]" id="nhlFour" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nhlFourImage">#4 Team Image</label>
+                <input class="form-control" type="text" name="article[nhlFourImage]" id="nhlFourImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nhlFive">#5 Team</label>
+                <input class="form-control" type="text" name="article[nhlFive]" id="nhlFive" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nhlFiveImage">#5 Team Image</label>
+                <input class="form-control" type="text" name="article[nhlFiveImage]" id="nhlFiveImage" required>
+            </div>
+            <h2>MLB</h2>
+            <div class="mb-3">
+                <label class="form-label" for="mlbOne">#1 Team</label>
+                <input class="form-control" type="text" name="article[mlbOne]" id="mlbOne" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mlbOneImage">#1 Team Image</label>
+                <input class="form-control" type="text" name="article[mlbOneImage]" id="mlbOneImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mlbTwo">#2 Team</label>
+                <input class="form-control" type="text" name="article[mlbTwo]" id="mlbTwo" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mlbTwoImage">#2 Team Image</label>
+                <input class="form-control" type="text" name="article[mlbTwoImage]" id="mlbTwoImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mlbThree">#3 Team</label>
+                <input class="form-control" type="text" name="article[mlbThree]" id="mlbThree" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mlbThreeImage">#3 Team Image</label>
+                <input class="form-control" type="text" name="article[mlbThreeImage]" id="mlbThreeImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mlbFour">#4 Team</label>
+                <input class="form-control" type="text" name="article[mlbFour]" id="mlbFour" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mlbFourImage">#4 Team Image</label>
+                <input class="form-control" type="text" name="article[mlbFourImage]" id="mlbFourImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mlbFive">#5 Team</label>
+                <input class="form-control" type="text" name="article[mlbFive]" id="mlbFive" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mlbFiveImage">#5 Team Image</label>
+                <input class="form-control" type="text" name="article[mlbFiveImage]" id="mlbFiveImage" required>
+            </div>
+            <h2>NFL</h2>
+            <div class="mb-3">
+                <label class="form-label" for="nflOne">#1 Team</label>
+                <input class="form-control" type="text" name="article[nflOne]" id="nflOne" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nflOneImage">#1 Team Image</label>
+                <input class="form-control" type="text" name="article[nflOneImage]" id="nflOneImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nflTwo">#2 Team</label>
+                <input class="form-control" type="text" name="article[nflTwo]" id="nflTwo" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nflTwoImage">#2 Team Image</label>
+                <input class="form-control" type="text" name="article[nflTwoImage]" id="nflTwoImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nflThree">#3 Team</label>
+                <input class="form-control" type="text" name="article[nflThree]" id="nflThree" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nflThreeImage">#3 Team Image</label>
+                <input class="form-control" type="text" name="article[nflThreeImage]" id="nflThreeImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nflFour">#4 Team</label>
+                <input class="form-control" type="text" name="article[nflFour]" id="nflFour" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nflFourImage">#4 Team Image</label>
+                <input class="form-control" type="text" name="article[nflFourImage]" id="nflFourImage" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nflFive">#5 Team</label>
+                <input class="form-control" type="text" name="article[nflFive]" id="nflFive" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="nflFiveImage">#5 Team Image</label>
+                <input class="form-control" type="text" name="article[nflFiveImage]" id="nflFiveImage" required>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Add Article</button>
+            </div>
+        </form>
+        <a class="btn btn-warning" href="/articles">Back to Articles</a>
+    </div>
+</div>
+
+
+
+
+
+model
+
+module.exports.articleSchema = Joi.object({
+    article: Joi.object({
+        title: Joi.string().required(),
+        game: Joi.string().required(),
+        release: Joi.string().required(),
+        console: Joi.string().required(),
+        //images: Joi.string().required(),
+        blog: Joi.string().required(),
+        movieOne: Joi.string().required(),
+        movieOneImage: Joi.string().required(),
+        movieTwo: Joi.string().required(),
+        movieTwoImage: Joi.string().required(),
+        movieThree: Joi.string().required(),
+        movieThreeImage: Joi.string().required(),
+        movieFour: Joi.string().required(),
+        movieFourImage: Joi.string().required(),
+        movieFive: Joi.string().required(),
+        movieFiveImage: Joi.string().required(),
+        musicOne: Joi.string().required(),
+        musicOneImage: Joi.string().required(),
+        musicTwo: Joi.string().required(),
+        musicTwoImage: Joi.string().required(),
+        musicThree: Joi.string().required(),
+        musicThreeImage: Joi.string().required(),
+        musicFour: Joi.string().required(),
+        musicFourImage: Joi.string().required(),
+        musicFive: Joi.string().required(),
+        musicFiveImage: Joi.string().required(),
+        nbaOne: Joi.string().required(),
+        nbaOneImage: Joi.string().required(),
+        nbaTwo: Joi.string().required(),
+        nbaTwoImage: Joi.string().required(),
+        nbaThree: Joi.string().required(),
+        nbaThreeImage: Joi.string().required(),
+        nbaFour: Joi.string().required(),
+        nbaFourImage: Joi.string().required(),
+        nbaFive: Joi.string().required(),
+        nbaFiveImage: Joi.string().required(),
+        nhlOne: Joi.string().required(),
+        nhlOneImage: Joi.string().required(),
+        nhlTwo: Joi.string().required(),
+        nhlTwoImage: Joi.string().required(),
+        nhlThree: Joi.string().required(),
+        nhlThreeImage: Joi.string().required(),
+        nhlFour: Joi.string().required(),
+        nhlFourImage: Joi.string().required(),
+        nhlFive: Joi.string().required(),
+        nhlFiveImage: Joi.string().required(),
+        mlbOne: Joi.string().required(),
+        mlbOneImage: Joi.string().required(),
+        mlbTwo: Joi.string().required(),
+        mlbTwoImage: Joi.string().required(),
+        mlbThree: Joi.string().required(),
+        mlbThreeImage: Joi.string().required(),
+        mlbFour: Joi.string().required(),
+        mlbFourImage: Joi.string().required(),
+        mlbFive: Joi.string().required(),
+        mlbFiveImage: Joi.string().required(),
+        nflOne: Joi.string().required(),
+        nflOneImage: Joi.string().required(),
+        nflTwo: Joi.string().required(),
+        nflTwoImage: Joi.string().required(),
+        nflThree: Joi.string().required(),
+        nflThreeImage: Joi.string().required(),
+        nflFour: Joi.string().required(),
+        nflFourImage: Joi.string().required(),
+        nflFive: Joi.string().required(),
+        nflFiveImage: Joi.string().required(),
+    }).required()
+});
+
+
+
+routes .post
+
+.post(isAdmin, upload.array('image'),validateArticle, catchAsync(articles.createArticle));
+
+
+
+
+
+
+
+show
+
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <div class="col-3">
+        <div class="card mb-3">
+            <div class="card-header">
+              Box Office Top 5
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">1. <%= article.movieOne %></span>
+                <img class="small-img ml-auto" src="<%= article.movieOneImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">2. <%= article.movieTwo %></span>
+                <img class="small-img ml-auto" src="<%= article.movieTwoImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">3. <%= article.movieThree %></span>
+                <img class="small-img ml-auto" src="<%= article.movieThreeImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">4. <%= article.movieFour %></span>
+                <img class="small-img ml-auto" src="<%= article.movieFourImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">5. <%= article.movieFive %></span>
+                <img class="small-img ml-auto" src="<%= article.movieFiveImage %>" alt="">
+              </li>
+            </ul>
+          </div>
+          <div class="card mb-3">
+            <div class="card-header">
+              NBA Top 5
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">1. <%= article.nbaOne %></span>
+                <img class="small-img ml-auto" src="<%= article.nbaOneImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">2. <%= article.nbaTwo %></span>
+                <img class="small-img ml-auto" src="<%= article.nbaTwoImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">3. <%= article.nbaThree %></span>
+                <img class="small-img ml-auto" src="<%= article.nbaThreeImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">4. <%= article.nbaFour %></span>
+                <img class="small-img ml-auto" src="<%= article.nbaFourImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">5. <%= article.nbaFive %></span>
+                <img class="small-img ml-auto" src="<%= article.nbaFiveImage %>" alt="">
+              </li>
+            </ul>
+          </div>
+          <div class="card mb-3">
+            <div class="card-header">
+              MLB Top 5
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">1. <%= article.mlbOne %></span>
+                <img class="small-img ml-auto" src="<%= article.mlbOneImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">2. <%= article.mlbTwo %></span>
+                <img class="small-img ml-auto" src="<%= article.mlbTwoImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">3. <%= article.mlbThree %></span>
+                <img class="small-img ml-auto" src="<%= article.mlbThreeImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">4. <%= article.mlbFour %></span>
+                <img class="small-img ml-auto" src="<%= article.mlbFourImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">5. <%= article.mlbFive %></span>
+                <img class="small-img ml-auto" src="<%= article.mlbFiveImage %>" alt="">
+              </li>
+            </ul>
+          </div>
+    </div>
+    <div class="col-6">
+        <div class="card mb-3">
+            <% for(let img of article.images) { %>
+              <img src="<%= img.url %>" class="card-img-top" alt="...">
+            <% } %>
+            <div class="card-body">
+              <h5 class="card-title text-center"><%= article.title %></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-center"><%= article.game %></li>
+                <li class="list-group-item text-center"><%= article.release %></li>
+                <li class="list-group-item text-center"><%= article.console %></li>
+            </ul>
+            <div class="card-body">
+                <p class="card-text"><%- article.blog %></p>
+                <% if(currentUser && currentUser.role === 'admin'){ %>
+                <a class="card-link btn btn-info" href="/articles/<%= article._id %>/edit">Edit Article</a>
+                <form class="d-inline" action="/articles/<%=article._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+                <% } %>
+            </div>
+          </div>
+    </div>
+    <div class="col-3">
+        <div class="card mb-3">
+            <div class="card-header">
+              Billboard Top 5
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">1. <%= article.musicOne %></span>
+                <img class="small-img ml-auto" src="<%= article.musicOneImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">2. <%= article.musicTwo %></span>
+                <img class="small-img ml-auto" src="<%= article.musicTwoImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">3. <%= article.musicThree %></span>
+                <img class="small-img ml-auto" src="<%= article.musicThreeImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">4. <%= article.musicFour %></span>
+                <img class="small-img ml-auto" src="<%= article.musicFourImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">5. <%= article.musicFive %></span>
+                <img class="small-img ml-auto" src="<%= article.musicFiveImage %>" alt="">
+              </li>
+            </ul>
+          </div>
+          <div class="card mb-3">
+            <div class="card-header">
+              NHL Top 5
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">1. <%= article.nhlOne %></span>
+                <img class="small-img ml-auto" src="<%= article.nhlOneImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">2. <%= article.nhlTwo %></span>
+                <img class="small-img ml-auto" src="<%= article.nhlTwoImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">3. <%= article.nhlThree %></span>
+                <img class="small-img ml-auto" src="<%= article.nhlThreeImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">4. <%= article.nhlFour %></span>
+                <img class="small-img ml-auto" src="<%= article.nhlFourImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">5. <%= article.nhlFive %></span>
+                <img class="small-img ml-auto" src="<%= article.nhlFiveImage %>" alt="">
+              </li>
+            </ul>
+          </div>
+          <div class="card mb-3">
+            <div class="card-header">
+              NFL Top 5
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">1. <%= article.nflOne %></span>
+                <img class="small-img ml-auto" src="<%= article.nflOneImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">2. <%= article.nflTwo %></span>
+                <img class="small-img ml-auto" src="<%= article.nflTwoImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">3. <%= article.nflThree %></span>
+                <img class="small-img ml-auto" src="<%= article.nflThreeImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">4. <%= article.nflFour %></span>
+                <img class="small-img ml-auto" src="<%= article.nflFourImage %>" alt="">
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="text-truncate small-text">5. <%= article.nflFive %></span>
+                <img class="small-img ml-auto" src="<%= article.nflFiveImage %>" alt="">
+              </li>
+            </ul>
+          </div>
+    </div>
+</div>
+<div>
+    <h2>Leave A Review!</h2>
+    <h4>Rate This Game Out Of 10 And Leave Your Own Review</h4>
+    <% if(!currentUser){ %>
+      <h5>Log in to leave a review</h5>
+    <% } %>
+    <% if(currentUser) {%>
+    <form class="mb-3 validated-form" action="/articles/<%= article._id %>/reviews" method="POST" novalidate>
+        <!-- <div class="mb-3">
+            <label class="form-label" for="rating">Rating</label>
+            <input class="form-range" type="range" min="1" max="10" name="review[rating]" id="rating">
+        </div> -->
+        <fieldset class="starability-basic">
+          <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+          <label for="first-rate1" title="1">1 star</label>
+          <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+          <label for="first-rate2" title="2">2 stars</label>
+          <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+          <label for="first-rate3" title="3">3 stars</label>
+          <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+          <label for="first-rate4" title="4">4 stars</label>
+          <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+          <label for="first-rate5" title="5">5 stars</label>
+          <input type="radio" id="first-rate6" name="review[rating]" value="6" />
+          <label for="first-rate6" title="6">6 stars</label>
+          <input type="radio" id="first-rate7" name="review[rating]" value="7" />
+          <label for="first-rate7" title="7">7 stars</label>
+          <input type="radio" id="first-rate8" name="review[rating]" value="8" />
+          <label for="first-rate8" title="8">8 stars</label>
+          <input type="radio" id="first-rate9" name="review[rating]" value="9" />
+          <label for="first-rate9" title="9">9 stars</label>
+          <input type="radio" id="first-rate10" name="review[rating]" value="10" />
+          <label for="first-rate10" title="10">10 stars</label>
+      </fieldset>     
+        <div class="mb-3">
+            <label class="form-label" for="body">Review</label>
+            <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
+            <div class="valid-feedback">
+              That's Better!
+            </div>
+        </div>
+        <button class="btn btn-success">Submit</button>
+    </form>
+    <% } %>
+    <% for (let review of article.reviews) { %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="mb-3">
+          <h5 class="card-title"> <%= review.author.username%></h5>
+          <p class="starability-result" data-rating="<%=review.rating%>">
+          </p>
+          <p class="card-text"><%= review.body %></p>
+          <% if (currentUser && (currentUser.role === 'admin' || review.author.equals(currentUser._id))) { %>
+          <form action="/articles/<%= article._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger btn-sm ">Delete</button>
+          </form>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <% } %>
+</div>

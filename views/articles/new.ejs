@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <h1 class="text-center">New Article</h1>
+    <div class="col-6 offset-3">
+        <form action="/articles" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" name="article[title]" id="title" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="game">Game</label>
+                <input class="form-control" type="text" name="article[game]" id="game" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="console">Console</label>
+                <input class="form-control" type="text" name="article[console]" id="console" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="release">Release</label>
+                <input class="form-control" type="text" name="article[release]" id="release" required>
+            </div>
+            <div class="mb-3">
+                <input type="file" name="image" id="" multiple>
+            </div>
+<!--             <div class="mb-3">
+                <label class="form-label" for="image">Image</label>
+                <input class="form-control" type="text" name="article[image]" id="image" required>
+            </div> -->
+            <div class="mb-3">
+                <label class="form-label" for="blog">Blog</label>
+                <textarea class="form-control" type="text" name="article[blog]" id="mytextarea"></textarea>
+            </div>
+            <!-- Movies Section -->
+            <h2>Movies</h2>
+            <% for(let i = 1; i <= 5; i++) { %>
+            <div class="mb-3">
+                <label class="form-label" for="movieTitle<%= i %>">#<%= i %> Movie Title</label>
+                <input class="form-control" type="text" name="article[movies][<%= i - 1 %>][title]" id="movieTitle<%= i %>" required>
+                <label class="form-label" for="movieImage<%= i %>">#<%= i %> Movie Image</label>
+                <input class="form-control" type="file" name="article[movies][<%= i - 1 %>][image]" id="movieImage<%= i %>" accept="image/*" required>
+            </div>
+            <% } %>
+                        <div class="mb-3">
+                <button class="btn btn-success">Add Article</button>
+            </div>
+        </form>
+        <a class="btn btn-warning" href="/articles">Back to Articles</a>
+    </div>
+</div>
